@@ -8,14 +8,22 @@
 /* GENERICS */
 body{
     font-family: 'PT Sans', sans-serif; 
+    padding-top: 100px;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    display: block;
+}
+
 
 /* UTILS */
 .l-container{
     max-width: 1200px;
     margin: 0 auto;
     border: 2px dashed red;
-    padding: 0 20px;
 }
 .m-container{
     max-width: 1080px;
@@ -33,24 +41,51 @@ body{
 
 /* HEADER */
 header{
-    height: 100px;
-    border: 2px dashed red;
+    height: 80px;
     background-color: rgb(0,132,253);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgb(97,97,97);
 }
 .nav{
-    height: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.nav-left , .nav-right{
+    flex-basis: 45%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+.button-start{
+    padding: 5px 17px;
+    background-color: white;
+    color: black;
+    border-radius: 17px;
+}
+.menu-logo{
+    display: none;
+    font-size: 35px;
+}
 @media screen and (max-width: 768px){
-    l-container{
+    .l-container{
         max-width: 100%;
+    }
+    .nav-right{
+        display: none;
+    }
+    .menu-logo{
+        display: block;
     }
 }
 @media screen and (max-width: 576px){
-    l-container{
+    .l-container{
         max-width: 100%;
     }
 }
@@ -72,15 +107,64 @@ header{
     border: 2px dashed red;
     padding: 20px;
 }
+.app-card-large{
+    background-color: rgb(181,221,255);
+    border-radius: 20px;
+    display: flex;
+    min-height: 100%;
+}
+.app-card-large-left{
+    flex-basis: 55%;
+    padding:20px;
+}
+.app-card-large-right{
+    flex-basis: 45;
+}
+.app-card-large img{
+    width: 250px;
+    margin-top: 20px;
+}
+.app-button{
+    color: white;
+    padding: 10px 50px;
+    border-radius: 20px;
+    background-color: rgb(0,132,253);
+}
 .app-card{
     background-color: rgb(181,221,255);
     border-radius: 20px;
-    padding: 10px;
-    min-height: 300px;
+    padding: 20px;
+    text-align: center;
+    min-height: 100%;
+}
+.app-row h3{
+    color: rgb(0,132,253);
+    margin: 20px 0;
+}
+.app-card-large-left p{
+    color: rgb(97,119,138);
+    margin-bottom: 40px;
+}
+.app-icon{
+    font-size: 70px;
+    color: rgb(0,132,253);
+}
+
+@media screen and (max-width: 768px){
+    .app-card-large{
+        flex-direction: column;
+    }
+    .app-card-large-left{
+        margin-left: 10px;
+    }
 }
 @media screen and (max-width: 576px){
     .app-row{
         flex-direction: column;
+    }
+    .app-card-large{
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -102,7 +186,7 @@ header{
     
 }
 @media screen and (max-width: 768px){
-    m-container{
+    .m-container{
         max-width: 100%;
     }
     .strat-row{
@@ -110,7 +194,7 @@ header{
     }
 }
 @media screen and (max-width: 576px){
-    m-container{
+    .m-container{
         max-width: 100%;
     }
     .strat-row{
