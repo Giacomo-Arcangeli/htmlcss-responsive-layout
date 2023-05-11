@@ -17,6 +17,14 @@ body{
     border: 2px dashed red;
     padding: 0 20px;
 }
+.m-container{
+    max-width: 1080px;
+    margin: 0 auto;
+    border: 2px dashed red;
+}
+.bg-v{
+    background-color: rgb(151,146,228);
+}
 
 /* HEADER */
 header{
@@ -60,7 +68,6 @@ header{
     padding: 20px;
 }
 .app-card{
-    min-height: 300px;
     background-color: rgb(181,221,255);
     border-radius: 20px;
     padding: 10px;
@@ -68,6 +75,39 @@ header{
 @media screen and (max-width: 576px){
     .app-row{
         flex-direction: column;
-        align-items: center;
+    }
+}
+
+/* STRATEGIC SECTION */
+.strat-section{
+    min-height: 500px;
+}
+.strat-row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed red;
+}
+.strat-col{
+    flex-basis: calc(100% / 2);
+    border: 2px dashed red;
+    min-height: 300px;
+}
+.strat-card{
+    
+}
+@media screen and (max-width: 768px){
+    m-container{
+        max-width: 100%;
+    }
+    .strat-row{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 576px){
+    m-container{
+        max-width: 100%;
+    }
+    .strat-row{
+        flex-direction: column;
     }
 }
