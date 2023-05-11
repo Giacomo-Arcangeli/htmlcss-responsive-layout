@@ -140,3 +140,35 @@ header{
         flex-direction: column;
     }
 }
+
+/* BENEFIT SECTION */
+.ben-text{
+    text-align: center;
+    border: 2px dashed red;
+}
+.ben-row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed red;
+    margin: 0 -20px;
+}
+.ben-col{
+    flex-basis: calc(100% / 3);
+    border: 2px dashed red;
+    padding: 20px;
+}
+.ben-card{
+    border-radius: 20px;
+    padding: 10px;
+    min-height: 300px;
+}
+@media screen and (max-width: 768px) {
+    .ben-col{
+        flex-basis: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 576px) {
+    .ben-row{
+        flex-direction: column;
+    }
+}
