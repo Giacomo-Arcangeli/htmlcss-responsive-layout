@@ -71,6 +71,7 @@ header{
     background-color: rgb(181,221,255);
     border-radius: 20px;
     padding: 10px;
+    min-height: 300px;
 }
 @media screen and (max-width: 576px){
     .app-row{
@@ -80,7 +81,7 @@ header{
 
 /* STRATEGIC SECTION */
 .strat-section{
-    min-height: 500px;
+    min-height: 300px;
 }
 .strat-row{
     display: flex;
@@ -108,6 +109,34 @@ header{
         max-width: 100%;
     }
     .strat-row{
+        flex-direction: column;
+    }
+}
+
+/* PARTNER SECTION */
+.part-text{
+    text-align: center;
+}
+.part-row{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px dashed red;
+    margin: 0 -20px;
+}
+.part-col{
+    border: 2px dashed red;
+    flex-basis: calc(100% / 3);
+    padding: 20px;
+}
+.part-card{
+    min-height: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+}
+@media screen and (max-width: 576px) {
+    .part-card{
         flex-direction: column;
     }
 }
