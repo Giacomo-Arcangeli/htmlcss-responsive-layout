@@ -172,3 +172,23 @@ header{
         flex-direction: column;
     }
 }
+
+/* ABOUT SECTION */
+.ab-row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed red;
+}
+.ab-col{
+    flex-basis: calc(100% / 2);
+    border: 2px dashed red;
+}
+.ab-card{
+    padding: 10px;
+    min-height: 300px;
+}
+@media screen and (max-width: 576px) {
+    .ab-row{
+        flex-direction: column;
+    }
+}
