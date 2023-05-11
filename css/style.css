@@ -15,6 +15,7 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     border: 2px dashed red;
+    padding: 0 20px;
 }
 
 /* HEADER */
@@ -38,5 +39,35 @@ header{
 @media screen and (max-width: 576px){
     l-container{
         max-width: 100%;
+    }
+}
+
+/* APP SECTION */
+.app-row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed red;
+    margin: 0 -20px;
+}
+.app-col{
+    flex-basis: calc(100% / 3);
+    border: 2px dashed red;
+    padding: 20px;
+}
+.app-col-large{
+    flex-basis: 66.6%;
+    border: 2px dashed red;
+    padding: 20px;
+}
+.app-card{
+    min-height: 300px;
+    background-color: rgb(181,221,255);
+    border-radius: 20px;
+    padding: 10px;
+}
+@media screen and (max-width: 576px){
+    .app-row{
+        flex-direction: column;
+        align-items: center;
     }
 }
